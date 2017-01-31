@@ -1,0 +1,78 @@
+.icon-2x {
+  font-size: 36px;
+}
+.icon-3x {
+  font-size: 56px;
+}
+.icon-4x {
+  font-size: 76px;
+}
+.icon-5x {
+  font-size: 96px;
+}
+.button-Radius {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: $border-radius-button;
+}
+.button-Radius2 {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: $border-radius-button-large;
+}
+
+.button-rounded {
+  display: block !important;
+  width: 30px !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  border:transparent !important;
+  border-radius: 50% !important;
+  color: white !important;
+  background-color: transparent !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  font-size: 50px !important;
+  font-weight: bolder !important;
+}
+
+.button-clear{
+  color: white !important;
+}
+
+.button-bottom {
+  margin-top :35px
+}
+
+.noBlur {
+  //position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.overflow-scrolled {
+  //overflow-x: hidden;
+  //overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  // Make sure the scrollbar doesn't take up layout space on edge
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+
+  &.pane {
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .scroll {
+    position: static;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);   // fix iOS bug where relative children of scroller disapear while scrolling.  see: http://stackoverflow.com/questions/9807620/ipad-safari-scrolling-causes-html-elements-to-disappear-and-reappear-with-a-dela
+  }
+}
+
+

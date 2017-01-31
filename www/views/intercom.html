@@ -1,0 +1,25 @@
+<div class="content main intercom">
+    <!--{{intercoms}}-->
+    <div class="commands" style="  margin-top: 72px;">
+        <!--<button class="button button-block button-outline button-positive" on-touch="callToggle()"> Push to talk</button>-->
+        <round-selector ng-model="selection" list="clients" options="options">
+            <div class="innerButton animate-show" ng-class="{'background-balanced':(callStatus === 'registered'), 'background-positive':(callStatus === 'registered'  ), 'background-energized':(callStatus === 'inviting' || callStatus === 'established')}">
+                <button class="button button-circle" on-tap="makeCall()" on-hold="talk()" on-release="stopTalk()" ng-disabled="callStatus === 'unregistered'">Call</button>
+            </div>
+        </round-selector>
+        <div class="footer center">
+            <button class="button button-block button-balanced" disabled>Baby phone</button>
+        </div>
+    </div>
+    <div class="video">
+        <video class="remote" autoplay ng-show="callStatus === 'inviting' || callStatus === 'established' "  id="remote-video"></video>
+        <video class="mine" muted  autoplay ng-show="callStatus === 'inviting' || callStatus === 'established' " id="local-video"></video>
+        <div class="ctrl">
+            <div class="footer">
+                <button ng-show="callStatus === 'incoming'" on-tap="acceptCall()" class="button button-positive icon ion-ios-telephone"></button>
+                <button ng-show="callStatus === 'incoming'" on-tap="rejectCall()" class="button button-assertive icon ion-android-hand"></button>
+                <button ng-show="callStatus === 'inviting' || callStatus === 'established'" on-tap="endCall()" class="button button-assertive icon ion-android-hand"></button>
+            </div>
+        </div>
+    </div>
+</div>

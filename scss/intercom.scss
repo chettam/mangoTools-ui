@@ -1,0 +1,124 @@
+@import "variables";
+
+
+@media (width: 1280px) {
+  .intercom{
+    height: $main-height-1280
+  }
+}
+
+@media (width: 1920px) {
+  .intercom{
+    height: $main-height-1920
+  }
+}
+
+img {
+  -webkit-user-drag: none;
+  border-radius: 60px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+}
+
+.intercom{
+  width:100%;
+  background-color: transparent;
+  display: table;
+  table-layout: fixed;
+  vertical-align: middle;
+  .commands{
+    display:table-cell;
+    padding-top: 25px;
+    width:400px; // >= round-selector.scss -> $selector-size
+    height:100%;
+    .footer{
+      position: relative;
+      bottom: -10px;
+      width: 100%;
+      button{
+        margin-left: 2%;
+        border-radius: 44px;
+        min-width: 150px;
+        &.button-block{
+          width:96%;
+        }
+        &.button-right{
+          float:right;
+        }
+      }
+    }
+    .innerButton{
+      &.background-balanced{
+        background-color: $balanced;
+        button{
+          color:white;
+        }
+      }
+      &.background-positive{
+        background-color: $positive;
+        button{
+          color:white;
+        }
+      }
+      &.background-energized{
+        background-color: $energized;
+        button{
+          color:white;
+        }
+      }
+      button{
+        background-color: transparent;
+        border: none;
+        &.activated{
+          box-shadow:none;
+        }
+      }
+    }
+  }
+  .video{
+    display:table-cell;
+    position: relative;
+    border-radius: $border-radius-button-large;
+    height:100%;
+    .remote{
+      //background-color: #dddddd;
+      height: 96%;
+      width: 96%;
+      margin: 1%;
+      border-radius: $border-radius-button-large;
+    }
+    .mine{
+      position: absolute;
+      bottom: 14px;
+      right: 26px;
+      width: 200px;
+      border-radius: $border-radius-button-large;
+    }
+    .ctrl{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-left: $border-common;
+      .ctrl-main{
+        position: absolute;
+        left:277px;
+        top:227px;
+      }
+      .footer{
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        right: 0;
+        height: 100px;
+        text-align: center;
+        button {
+          border-radius: 44px;
+          min-width: 150px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<div ng-controller="HeaderCtrl">
+  <div class="row header" ng-show="showHeader">
+    <ion-header-bar class="mango-menu bar-light" ng-controller="HeaderCtrl">
+      <div class="text-left" on-tap="changeRoom()">
+        <button class="button button-outline button-Radius button-icon icon ion-ios-home-outline"></button>
+      </div>
+      <div class="col col-8 text-center " on-tap="changeRoom()">
+        <h2 class="text-center-room">{{room.name}}</h2>
+      </div>
+      <div ng-hide="homFiController.connected" class="col col-10 text-right">
+        <button  on-tap="connect()" class="button button-outline button-icon icon ion-power"></button>
+      </div>
+      <div class="col col-10 text-right" ng-show="intercomEnabled">
+        <button ng-hide="callStatus" on-tap="showPhone()"  class="button button-outline button-icon icon ion-ios-videocam"></button>
+      </div>
+      <div class="col col-10 text-right">
+        <button ng-hide="callStatus" on-tap="showSettings()" on-hold="showStatus()" ng-class="{'ion-ios-undo' : setting , 'ion-ios-gear' : !setting  }" class="button button-outline button-Radius button-icon icon ion-ios-gear-outline"></button>
+      </div>
+    </ion-header-bar>
+  </div>
+</div>

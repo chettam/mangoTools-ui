@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src &apos;self&apos; &apos;unsafe-inline&apos;; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *">
+
+    <title></title>
+
+
+    <!-- compiled css output -->
+
+    <link href="css/homfi.panel.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="js/dependencies/jquery.js"></script>
+    <script src="js/dependencies/ionic.bundle.min.js"></script>
+    <script src="js/dependencies/ionic.cloud.min.js"></script>
+    <script src="js/dependencies/async.min.js"></script>
+    <script src="js/dependencies/angular-uuid4.min.js"></script>
+    <script src="js/dependencies/angular-audio.js"></script>
+    <script src="js/dependencies/angular-drag-and-drop-lists.min.js"></script>
+    <script src="js/dependencies/core-min.js"></script>
+    <script src="js/dependencies/janus.js"></script>
+    <script src="js/dependencies/hmac-sha1.js"></script>
+    <script src="js/dependencies/lodash.min.js"></script>
+    <script src="js/dependencies/md5-min.js"></script>
+    <script scr="js/dependencies/sha256-min.js"></script>
+    <script src="js/dependencies/sha256.js"></script>
+    <script src="js/dependencies/stringFormater.js"></script>
+    <script src="js/dependencies/socket.io.js"></script>
+    <script src="js/dependencies/sweetalert.min.js"></script>
+    <script src="js/dependencies/angular-clock.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+
+    <script src="js/directives/background.js"></script>
+    <script src="js/directives/canvas-tile.js"></script>
+    <script src="js/directives/progress-circle.js"></script>
+    <script src="js/directives/round-selector.js"></script>
+    <script src="js/directives/tile.js"></script>
+    <script src="js/directives/tile-info.js"></script>
+    <script src="js/directives/tile-alarm.js"></script>
+    <script src="js/directives/tile-in-progress.js"></script>
+    <script src="js/directives/tile-scene.js"></script>
+    <script src="js/directives/tile-heating.js"></script>
+    <script src="js/directives/tile-shutters.js"></script>
+    <script src="js/directives/tile-media.js"></script>
+    <script src="js/directives/tile-switch.js"></script>
+    <script src="js/directives/tile-slider.js"></script>
+    <script src="js/directives/tile-door-panel.js"></script>
+    <script src="js/directives/tile-push-button.js"></script>
+    <script src="js/directives/tile-smoke-alarm.js"></script>
+    <script src="js/directives/tile-left-right-button.js"></script>
+    <script src="js/directives/tile-up-down-button.js"></script>
+    <script src="js/directives/tile-light-rgb.js"></script>
+    <script src="js/directives/tile-light-switch.js"></script>
+    <script src="js/directives/tile-light-dimmer.js"></script>
+    <script src="js/directives/shakePage.js"></script>
+
+    <script src="js/filters/secondsToDateTime.js"></script>
+
+    <script src="js/services/canvasCircle.js"></script>
+    <script src="js/services/canvasCircleDoubleButton.js"></script>
+    <script src="js/services/canvasCircleExtraButton.js"></script>
+    <script src="js/services/canvasCircleMainButton.js"></script>
+    <script src="js/services/canvasCircleRgb.js"></script>
+    <script src="js/services/canvasCircleTouch.js"></script>
+    <script src="js/services/color.js"></script>
+    <script src="js/services/config.js"></script>
+    <script src="js/services/homFiConnect.js"></script>
+    <script src="js/services/homFiUtils.js"></script>
+    <script src="js/services/intercom.js"></script>
+    <script src="js/services/imageLocator.js"></script>
+    <script src="js/services/localStorage.js"></script>
+    <script src="js/services/proximity.js"></script>
+    <script src="js/services/screenSaver.js"></script>
+    <script src="js/services/status.js"></script>
+    <script src="js/services/sip.js"></script>
+    <script src="js/services/utils.js"></script>
+    <script src="js/services/update.js"></script>
+    <script src="js/services/wifi.js"></script>
+
+
+    <script src="js/controllers/settings/homFiCtrl.js"></script>
+    <script src="js/controllers/headerCtrl.js"></script>
+    <script src="js/controllers/doorPanelCtrl.js"></script>
+    <script src="js/controllers/mainCtrl.js"></script>
+    <script src="js/controllers/intercomCtrl.js"></script>
+    <script src="js/controllers/infoCtrl.js"></script>
+    <script src="js/controllers/roomSelectorCtrl.js"></script>
+    <script src="js/controllers/settingsCtrl.js"></script>
+    <script src="js/controllers/settings/wifiCtrl.js"></script>
+    <script src="js/controllers/SubMenuCtrl.js"></script>
+    <script src="js/controllers/musicCtrl.js"></script>
+    <script src="js/controllers/playlistCtrl.js"></script>
+    <script src="js/controllers/screenSaverCtrl.js"></script>
+    <script src="js/controllers/lockScreenCtrl.js"></script>
+
+
+  </head>
+  <body ng-app="mangoPanel">
+  <div background="" class="">
+    <ng-include src="'views/header.html'"></ng-include>
+    <ui-view></ui-view>
+  </div>
+
+
+  </body>
+</html>

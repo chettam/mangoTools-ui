@@ -1,0 +1,55 @@
+
+.music-home-date{
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-left: 35px;
+  margin-top: 10px
+}
+.music-home-time{
+  font-size: 80px;
+}
+
+.musicPLayer .tile {
+  margin-top :200px;
+}
+
+.title-text-music-player {
+  margin-left :50px
+}
+
+.playerBar {
+  margin-left : -10px;
+}
+
+.playerList {
+  height : 600px;
+  overflow: scroll;
+}
+
+.playerProgress {
+  width: inherit !important;
+}
+
+
+.art-work {
+  padding-left: 19px !important ;
+  margin-left: 17px;
+  width: 400px;
+  border-radius: 300PX;
+  height: 390px;
+  margin-top: 32px;
+}
+
+@media (width: 1280px) {
+  .player {
+    margin-top: 80px;
+  }
+}
+
+
+@media (width: 1920px) {
+  .player {
+    margin-top: 120px;
+  }
+}
+

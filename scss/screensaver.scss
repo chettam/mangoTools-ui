@@ -1,0 +1,55 @@
+@import "variables";
+
+.time-format{
+  margin-top: 230px;
+  margin-left: 50px;
+  position: absolute;
+  font-size: 150px;
+  color: white;
+}
+.date-format{
+  margin-top: 535px;
+  margin-left: 20px;
+  position: absolute;
+  font-size: 35px;
+  color: white;
+}
+//.timeCircle{
+//  margin-top: 163px;
+//  margin-left: 442px;
+//  position: absolute;
+//  width: $screen_width-1280 /2;
+//  height: $screen_height-1280 / 2;
+//  top:0;
+//  bottom: 0;
+//}
+//
+//.centerScreen{
+//  width: 500px;
+//  height: 500px;
+//  top:0;
+//  bottom: 0;
+//
+//}
+
+.circleBase {
+  width : 500px;
+  height : 500px;
+  border-radius: 50%;
+  background: transparent;
+  border: 8px solid white;
+}
+
+@media (width: 1280px) {
+  .circleBase {
+    margin-left: 390px;
+  }
+}
+
+@media (width: 1920px) {
+  .circleBase {
+    margin-left: 710px;
+  }
+}
+
+

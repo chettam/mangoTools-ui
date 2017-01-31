@@ -1,0 +1,20 @@
+<div class="content main room-select">
+    <ion-slide-box show-pager="false" does-continue="false" on-slide-changed="changeSlideIndex($index)" active-slide="activeSlide">
+        <ion-slide ng-repeat="roomPage in roomPages">
+            <div class="row" ng-repeat="roomLine in roomPage">
+                <div class="col-33" ng-model="roomSelected" ng-repeat="room in roomLine">
+                    <button class="button button-full button-clear button-room button-Radius2" on-tap="selectRoom(room)">
+                        {{room.name}}
+                    </button>
+                </div>
+            </div>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="slide-menu" ng-show="roomPages && roomPages.length>1">
+        <div class="left" on-tap="onPrev()"><div ng-show="slideIndex>0"><i class="ion-ios-undo-outline"></i></div></div>
+        <div class="center">
+            <div class="slide-item" ng-repeat="roomPage in roomPages" on-tap="selectSlider($index)"><i ng-class="{'ion-ios-circle-outline':slideIndex!==$index, 'ion-ios-circle-filled':slideIndex===$index}"></i></div>
+        </div>
+        <div class="right" on-tap="onNext()"><div ng-show="slideIndex<roomPages.length-1"><i class="ion-ios-redo-outline"></i></div></div>
+    </div>
+</div>

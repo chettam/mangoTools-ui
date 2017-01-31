@@ -1,0 +1,11 @@
+<div class="content overflow-scroll has-header">
+    <div class="list">
+        <a class="item item-icon-left"  ng-repeat="item in infoList"  on-tap="homeEdit()">
+            <img ng-if="item.category.icon" style="height: 60px; width: 60px" ng-src="{{item.category.icon}}"><h2 style="display: inline-block;margin-left: 10%;margin-bottom: 8px;"> {{item.name}}</h2>
+
+            <span class="item-note">
+               {{item.formattedValue}}
+            </span>
+        </a>
+    </div>
+</div>

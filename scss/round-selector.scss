@@ -1,0 +1,161 @@
+@import "variables";
+
+// Size of the main div of the directive
+$selector-size: 400px;
+$selector-inner-size: 180px;
+$selector-inner-button-size: $selector-inner-size;
+$selector-inner-button-button-size: 130px;
+
+// Size of the selectable items div
+$selector-item-size: 100px;
+
+$selector-item-icon-size: 50px;
+
+$selector-center-x: ($selector-size - $selector-item-size)/2;
+$selector-center-y: $selector-center-x;
+
+.round-selector{
+  .items{
+    position: relative;
+    width: $selector-size;
+    height: $selector-size;
+  }
+  .room{
+    z-index:2;
+    width:$selector-item-size;
+    height:$selector-item-size;
+    position: absolute;
+    left:$selector-center-x;
+    top:$selector-center-y;
+    border-radius: 50%;
+    border: $border-common;
+    transition: all 0.4s ease-in-out;
+    background-color: $color-bluegrey;
+
+    &.selected{
+      background-color:$positive;
+      color:white;
+    }
+
+    img{
+      margin-top:  ($selector-item-size - $selector-item-icon-size)/2;
+      margin-left: ($selector-item-size - $selector-item-icon-size)/2;
+      width:  $selector-item-icon-size;
+      height: $selector-item-icon-size;
+    }
+  }
+  .inner{
+    position:     absolute;
+    top:          floor(($selector-size - $selector-inner-size)/2);
+    left:         floor(($selector-size - $selector-inner-size)/2);
+    width:        $selector-inner-size;
+    height:       $selector-inner-size;
+    line-height:  $selector-inner-size;
+    text-align:   center;
+    vertical-align: middle;
+    overflow:hidden;
+    border-radius: 50%;
+    border: $border-common;
+    transition: all 0.4s ease-in-out;
+    font-family: $font-family-base;
+    color: #b2b2b2;
+    font-size: 40px;
+    .innerButton{
+
+      position: absolute;
+      top:   floor(($selector-inner-size - $selector-inner-button-size)/2);
+      left:  floor(($selector-inner-size - $selector-inner-button-size)/2);
+      width:  $selector-inner-button-size - 2;
+      height: $selector-inner-button-size - 2;
+      border-radius: 50%;
+      button{
+        position: absolute;
+        top:       floor(($selector-inner-button-size - $selector-inner-button-button-size)/2);
+        left:      floor(($selector-inner-button-size - $selector-inner-button-button-size)/2);
+        width:      $selector-inner-button-button-size;
+        height:     $selector-inner-button-button-size;
+        max-height: $selector-inner-button-button-size;
+        font-family: $font-family-base;
+        font-size: 40px;
+      }
+    }
+  }
+
+}
+
+.animate-show {
+  opacity: 1;
+  &.ng-hide-add, &.ng-hide-remove {
+    transition: all linear 0.5s;
+  }
+  &.ng-hide {
+    opacity: 0;
+  }
+}
+
+/*
+
+
+.animated-zoom{
+  &.ng-enter,
+  {
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    animation: zoomIn 800ms;
+    position: relative;
+    display: block;
+
+    opacity: 0;
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+  &.ng-leave,
+  {
+    transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    animation: zoomOut 800ms;
+    position: relative;
+    display: block;
+    &.ng-leave-active {
+      opacity: 1;
+    }
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
+*/

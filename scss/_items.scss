@@ -1,0 +1,23 @@
+@import "variables";
+
+// Item Note
+// -------------------------------
+
+.item {
+  background-color: $settings;
+  font-size: 32px; }
+
+
+.item-note {
+  float: right;
+  color: $button-energized-text;
+  font-size: 28px;
+}
+.item-divider {
+  padding-top: ceil($item-padding / 2);
+  padding-bottom: ceil($item-padding / 2);
+  min-height: 30px;
+  background-color: $settings;
+  color: $item-divider-color;
+  font-weight: 500;
+}

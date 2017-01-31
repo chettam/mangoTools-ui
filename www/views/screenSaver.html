@@ -1,0 +1,31 @@
+<div class="content" ui-sref="index">
+  <div class="row">
+    <div class="col col-10">
+      <h3> {{temp}} </h3>
+    </div>
+    <div ng-show="mediaPlayer.states.play.value" class="col col-90">
+      <div class="item range">
+        {{mediaPlayer.states.currentProgress.text}}
+        <!--<i class="icon ion-volume-low"></i>-->
+        <input type="range" name="volume" ng-model="mediaPlayer.states.currentProgress.value" max="{{mediaPlayer.states.currentDuration.value}}" min="0" disabled>
+        {{mediaPlayer.states.currentDuration.text}}
+        <!--<i class="icon ion-volume-high"></i>-->
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="circleBase">
+      <div class="centerScreen">
+        <div class="time-format">
+          <ds-widget-clock  data-show-digital theme="big" digital-format="timeFormat"></ds-widget-clock>
+        </div>
+        <div class="date-format">
+          <ds-widget-clock  data-show-digital theme="big" digital-format="dateFormat"></ds-widget-clock>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

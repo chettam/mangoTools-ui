@@ -1,0 +1,60 @@
+<div class="content">
+  <div class="row">
+    <div class="col col-50 text-left ">
+      <p>{{device.states.currentArtist.text}} -{{device.states.currentTitle.text}} </p>
+
+    </div>
+    <div class="col  text-right">
+      <div class="">
+        <button  on-tap="goBack()"  class="button button-icon icon ion-reply"></button>
+      </div>
+      <div class="music-home-time">
+        <ds-widget-clock  data-show-digital theme="big" digital-format="timeFormat"></ds-widget-clock>
+      </div>
+      <div class="music-home-date">
+        <ds-widget-clock  data-show-digital theme="big" digital-format="dateFormat"></ds-widget-clock>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col col-10 text-center">
+      <button class="button button-extra" on-tap="previous()"><i class="icon ion-ios-rewind"></i></button>
+    </div>
+    <div class="col col-10 text-center">
+      <button class="button button-extra" on-tap="togglePlay()"><i ng-show="device.states['play'].value ===0" class="icon ion-play"></i><i ng-show="device.states['play'].value ===1" class="icon ion-pause"></i></button>
+    </div>
+    <div class="col col-10 text-center">
+      <button class="button button-extra" on-tap="next()"><i class="icon ion-ios-fastforward"></i></button>
+    </div>
+  </div>
+  <div class="row player">
+
+  </div>
+  <div class="row player">
+    <div class="musicPLayer col col-40">
+      <div class="tile tile-sub-light-dimmer">
+        <div progress-circle options="circleOptions" ng-model="device.states['volume'].value">
+          <div class="tile-circle-inner">
+            <img class="art-work" ng-src="{{device.states.currentCover.text}}"/>
+          </div>
+        </div>
+        <button class="button button-text button-extra top left" on-tap="mute()"><i ng-show="device.states['mute'].value ===0  " class="icon ion-volume-medium"></i><i ng-show="device.states['mute'].value ===1" class="icon ion-volume-mute"></i></button>
+        <button class="button button-text button-extra top right" href="/musicPlayer/{{device.uid}}"><i class="icon ion-more"></i></button>
+        <button class="button button-text button-extra bottom left" on-tap="shuffle()"><i class="icon ion-shuffle"></i></button>
+        <button class="button button-text button-extra bottom right" on-tap="repeat()"><i class="icon ion-loop"></i></button>
+      </div>
+    </div>
+    <div class="playerList col col-60">
+      <div class ="range" >
+        <b>{{currentProgress | secondsToDateTime | date:'mm:ss'}}</b> <input type="range" class="playerProgress" name="volume" min="0" max="{{device.states['currentDuration'].value}}" ng-model="currentProgress" ng-change="timeSeek(currentProgress)" >
+      </div>
+      <table>
+      <tr ng-repeat="song in device.states.queue.value ">
+        <td style=" width:50px"> <button ng-click="trackSeek($index) "><i class="icon ion-play"></i></button></td>
+        <td style=" width:260px">{{song.artist | limitTo: 23}}</td>
+        <td><b>{{song.title | limitTo: 25}}</b></td>
+      </tr>
+        </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+@import "variables";
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: $button-calm-text;
+  font-weight: $headings-font-weight;
+  font-family: $headings-font-family;
+  line-height: $headings-line-height;
+
+  small {
+    font-weight: normal;
+    line-height: 1;
+  }
+}
+
+.bar.mango-menu{
+  background-color: $settings;
+  color: $color-bluegrey;
+  .col {
+    padding: 0 ;
+  }
+
+  .align-right {
+    float: right;
+  }
+  .button {
+    color: $button-calm-text;
+  }
+  .button-room{
+    width: 88px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    bottom: 5px;
+    img{
+      height: 40px;
+      width: 40px ;
+      background-color: $color-bluegrey;
+      margin-top: 17px;
+    }
+  }
+}
+
+.spinner svg {
+  width: 250px;
+  height: 250px;
+  stroke: $color-bluegrey;
+  fill:  $color-bluegrey;
+}
+
+.text-center-room {
+  padding-left: 120px;
+}

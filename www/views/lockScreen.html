@@ -1,0 +1,46 @@
+
+<div class="content main">
+  <div class="center-vertical" shake-that>
+      <div class="leftRow" style="text-align: center">
+        <div class="col col-10 col-offset-15 substring" style="font-size: 100px">
+          {{asterisk[0]}}
+        </div>
+        <div class="col col-10 col-offset-10 substring" style="font-size: 100px">
+          {{asterisk[1]}}
+        </div>
+        <div class="col col-10 col-offset-10 substring" style="font-size: 100px">
+          {{asterisk[2]}}
+        </div>
+        <div class="col col-10 col-offset-10 substring" style="font-size: 100px">
+          {{asterisk[3]}}
+        </div>
+      </div>
+
+    <div class="screenSaverMargin">
+      <div ng-repeat="icons in iconList">
+        <div class="row">
+          <div class="col col-30 ">
+            <button class="button button-rounded button-clear" ng-click="clickedIcon(icons[0])" >
+              <i class="icon {{icons[0]}}" ></i></button>
+          </div>
+          <div class="col col-30 ">
+            <button class="button button-rounded button-clear" ng-click="clickedIcon(icons[1])">
+              <i class="icon {{icons[1]}}" ></i></button>
+          </div>
+          <div class="col col-30 ">
+            <button class="button button-rounded button-clear" ng-click="clickedIcon(icons[2])" >
+              <i class="icon {{icons[2]}}" ></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="text-align: center">
+        <div class="col centerCol">
+          <button class="button button-rounded button-clear"></button>
+        </div>
+        <div class="col col-30">
+          <button class="button icon ion-arrow-left-a button-rounded button-clear " ng-click="removeIcon()"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,322 @@
+@import "variables";
+
+@media (width: 1280px) {
+  .tile {
+    width: $tile-width-1280;
+    height: $tile-height-1280;
+    position: absolute;
+    top: floor(($main-height-1280 - $tile-height-1280)/2);
+  }
+  &.tile-1{
+    left:5px;
+  }
+  &.tile-2{
+    left:$tile-width-1280;
+  }
+  &.tile-3{
+    left:2*$tile-width-1280;
+  }
+}
+
+@media (width: 1920px) {
+  .tile{
+    width:  $tile-width-1920;
+    height: $tile-height-1920;
+    position: absolute;
+    top:floor(($main-height-1920 - $tile-height-1920)/2);
+  }
+}
+
+.button-extra{
+  $button-extra-size: 50px;
+  width:$button-extra-size;
+  height:$button-extra-size;
+  min-height:$button-extra-size;
+  position: absolute;
+  border-radius: 50%;
+  background-color: transparent !important;
+  //border: $border-common;
+  &.button-icon.icon:before {
+    font-size: 40px;
+    line-height: $button-extra-size;
+  }
+  $button-extra-margin:20px;
+  &.top{    top:    $button-extra-margin; }
+  &.bottom{ bottom: $button-extra-margin; }
+  &.left{   left:   $button-extra-margin; }
+  &.right{  right:  $button-extra-margin; }
+
+  &.activated {
+    border-color: #aaa;
+    background-color: #f0f0f0;
+    //box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  &.button-text{
+    line-height: 40px;
+    min-width: 50px;
+    padding: 0;
+  }
+}
+
+// Progress Circle css
+$progress-circle-padding : 40px;
+$progress-circle-radius  : $tile-width-1280  - $progress-circle-padding;
+$progress-button-padding : 60px;
+$progress-circle-button-radius  : $tile-width-1280  - $progress-button-padding*2;
+.progress-circle{
+  canvas{
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    width:$tile-width-1280;
+    height:$tile-width-1280;
+  }
+  .progress-circle-inner{
+    position: relative;
+    top: $progress-button-padding;
+    left: $progress-button-padding ;
+    width: $progress-circle-button-radius;
+    text-align: center;
+    height: $progress-circle-button-radius;
+    line-height: $progress-circle-button-radius;
+    border-radius: 50%;
+    //border: $border-common;
+    transition: all 0.2s ease;
+    &.activated {
+      border-color: #aaa;
+      background-color: #f0f0f0;
+      color:white;
+    }
+  }
+  .inside-square{
+    width: 200px;
+    height: 200px;
+    max-height: 200px;
+    padding: 0;
+    text-align: center;
+    line-height: 200px;
+    color: $button-calm-text;
+    font-family: $font-family-base;
+    font-size: 40px;
+    &.up-down-icons{
+      line-height: normal;
+      i{
+        display: block;
+        height: 40px;
+      }
+    }
+  }
+  .tile-circle-inner{
+
+    .button-bottom,
+    .button-top,
+    .button-left,
+    .button-right,
+    .button-full{
+      position: absolute;
+      top: $progress-button-padding;
+      left: $progress-button-padding ;
+      width: $progress-circle-button-radius;
+      text-align: center;
+      //transition: all 0.2s ease;;
+      &.activated {
+        border-color: #aaa;
+        background-color: #f0f0f0;
+        color:white!important;
+        //box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+      font-size: 200%;
+      //border: $border-common;
+
+    }
+    .button-bottom,
+    .button-top {
+      .button-click{
+        width:floor($progress-circle-button-radius/2);
+        height:floor(($progress-circle-button-radius/2)*0.9);
+        max-height:floor(($progress-circle-button-radius/2)*0.9);
+        padding:0;
+      }
+    }
+    .button-top {
+      height: $progress-circle-button-radius/2;
+      line-height: $progress-circle-button-radius/2;
+      border-top-left-radius: floor($progress-circle-button-radius/2) - 1;
+      border-top-right-radius: floor($progress-circle-button-radius/2) - 1;
+      //border-bottom-left-radius: 15px;
+      //border-bottom-right-radius: 15px;
+    }
+    .button-bottom{
+      top: $progress-button-padding + $progress-circle-button-radius/2;
+      button{
+        position: relative;
+        top: -17px;
+      }
+      height: $progress-circle-button-radius/2;
+      line-height: $progress-circle-button-radius/2;
+      //border-top-left-radius: 15px;
+      //border-top-right-radius: 15px;
+      border-bottom-left-radius: floor($progress-circle-button-radius/2);
+      border-bottom-right-radius: floor($progress-circle-button-radius/2);
+    }
+    .button-left,
+    .button-right {
+      width:floor($progress-circle-button-radius/2);
+      height: $progress-circle-button-radius;
+      line-height: $progress-circle-button-radius;
+
+      .button-click{
+        width:floor($progress-circle-button-radius/2*0.9);
+        height:floor(($progress-circle-button-radius/2)*0.9);
+        max-height:floor(($progress-circle-button-radius/2)*0.9);
+        padding:0;
+      }
+    }
+    .button-left {
+      border-top-left-radius: floor($progress-circle-button-radius/2) - 1;
+      border-bottom-left-radius: floor($progress-circle-button-radius/2) - 1;
+      //border-bottom-left-radius: 15px;
+      //border-bottom-right-radius: 15px;
+    }
+    .button-right{
+      left: $progress-button-padding + $progress-circle-button-radius/2;
+      button{
+        //  position: relative;
+        //  top: -17px;
+      }
+      //line-height: $progress-circle-button-radius/2;
+      //border-top-left-radius: 15px;
+      //border-top-right-radius: 15px;
+      border-top-right-radius: floor($progress-circle-button-radius/2);
+      border-bottom-right-radius: floor($progress-circle-button-radius/2);
+    }
+    .button-full {
+      position: absolute;
+      height: $progress-circle-button-radius;
+      line-height: $progress-circle-button-radius;
+      border-radius: 50%;
+
+      .button-center{
+        $button-center-margin:40px;
+        width:$progress-circle-button-radius - $button-center-margin*2;
+        height:$progress-circle-button-radius - $button-center-margin*2;
+        max-height:$progress-circle-button-radius;
+        position: absolute;
+        top:$button-center-margin;
+        left:$button-center-margin;
+        i{
+          font-size: 300%;
+        }
+        &.button-click{
+          padding:0;
+          color: $button-calm-text;
+          font-family: $font-family-base;
+          font-size: 40px;
+        }
+      }
+      .main-icon{
+        font-size: 200%;
+        line-height: 275px;
+      }
+    }
+  }
+
+
+}
+
+.tile-title{
+  position: absolute;
+  width: $tile-width-1280;
+  top: $tile-width-1280 - 5px;
+  color: $button-calm-text;
+  //color: #b2b2b2;
+  font-family: $font-family-base;
+  font-size: 40px;
+  text-align: center;
+}
+.button{
+  color: $button-calm-text;
+  &.positive{
+    color: $positive;
+  }
+}
+&.tile-shutters .progress-circle .tile-circle-inner,
+&.tile-media .progress-circle .tile-circle-inner,
+&.tile-heating .progress-circle .tile-circle-inner
+{
+  .button-top, .button-bottom{
+    background-color: transparent;
+    &.activated{
+      background-color: #f0f0f0;
+      opacity: 0.6;
+      border-color: #888;
+    }
+  }
+  .button-top{
+    border-bottom-color: transparent!important;
+  }
+  .button-bottom{
+    border-top-color: transparent!important;
+  }
+  .button-full{
+    line-height: 195px;
+    &.volume, &.target{
+      transition:visibility 0s linear 0.2s,opacity 0.2s linear;
+      visibility:hidden;
+      opacity:0;
+      &.display{
+        visibility:visible;
+        opacity:1;
+        transition-delay:0s;
+      }
+    }
+  }
+  .inside-square{
+    position: absolute;
+    top:$progress-button-padding + ($progress-circle-button-radius - 200)/2;
+    left:$progress-button-padding + ($progress-circle-button-radius - 200)/2;
+
+  }
+}
+&.tile-heating .progress-circle .tile-circle-inner {
+  .inside-square{
+    top:150px;
+    height:100px;
+    left: 75px;
+    width: 245px;
+
+    .target, .current{
+      display: inline-block;
+      width: 50%;
+      height: 60px;
+      line-height: 60px;
+      margin-top: 20px;
+      vertical-align: top;
+      text-align: center;
+    }
+    .target {
+      font-weight: bold;
+      font-size: 120%;
+      border-right: solid 2px $button-calm-text;
+      //text-align: left;
+    }
+    .current {
+      //font-size: 80%;
+      //text-align: right;
+    }
+    .mode{
+      margin-top: 10px;
+      line-height: 100%;
+    }
+  }
+}
+&.tile-in-progress{
+  .button-full{
+    color: $button-calm-text;
+    font-family: $font-family-base;
+    font-size: 30px;
+    font-size: 100%!important;
+  }
+}
+

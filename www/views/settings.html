@@ -1,0 +1,35 @@
+<div class="content overflow-scroll has-header">
+    <div class="list">
+        <div class="item item-divider">
+            <h2>Settings</h2>
+        </div>
+        <div class="item item-icon-left"  on-tap="homeEdit()">
+            <i class="icon ion-android-pin"></i>
+            HomFi Controller
+             <span class="item-note">
+               Host : {{homFiController.host || 'Not Set'}} , Port : {{homFiController.port || 'Not Set'}}
+            </span>
+        </div>
+      <div class="item item-icon-left" on-tap="wifiEdit()">
+        <i class="icon ion-wifi"></i>
+        Wifi
+             <span class="item-note">
+              {{wifi  || 'Not Set'}}
+            </span>
+      </div>
+      <div class="item item-icon-left" on-tap="timeEdit()">
+        <i class="icon ion-clock"></i>
+        Date and time
+             <span class="item-note">
+              <ds-widget-clock  data-show-digital theme="big" digital-format="'dd-MMM-yyyy hh:mm:ss a'"></ds-widget-clock>
+            </span>
+      </div>
+        <div class="item text-center">
+            <button ng-click="checkForUpdates()" class="button button-outline button-royal"> Check for update</button>
+        </div>
+        <div class="item text-center">
+            <button ng-click="reset()" class="button button-outline button-royal">Reset Switch</button>
+        </div>
+    </div>
+</div>
+

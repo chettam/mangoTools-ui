@@ -1,0 +1,33 @@
+@import "variables";
+//
+//
+///**
+// * Buttons
+// * --------------------------------------------------
+// */
+//
+.button {
+
+  &.button-positive {
+    @include button-outline($button-light-active-bg);
+  }
+//
+  &.button-royal {
+    @include button-outline($button-energized-text);
+  }
+
+  &.button-balanced {
+    @include button-outline($button-balanced-bg);
+  }
+}
+
+.button-balanced{
+  background-color:$button-balanced-bg ;
+}
+
+.button-Radius {
+  border-radius: $border-radius-button;
+}
+.button-Radius2 {
+  border-radius: $border-radius-button-large;
+}

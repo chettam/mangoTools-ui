@@ -1,0 +1,30 @@
+@import "variables";
+
+// Form Controls
+// -------------------------------
+
+// Shared size and type resets
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  display: block;
+  padding-top: 2px;
+  padding-left: 0;
+  height: $line-height-computed + $font-size-base;
+  color: $button-light-active-bg;
+  vertical-align: middle;
+  font-size: $font-size-base;
+  line-height: $font-size-base + 2;
+}

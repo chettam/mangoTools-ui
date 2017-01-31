@@ -1,0 +1,12 @@
+{
+  "name": "Panel",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "app_id": "792a6067"
+}

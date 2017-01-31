@@ -1,0 +1,182 @@
+@import "variables";
+
+@media (width: 1280px) {
+  .main{
+    padding-top: 88px;
+    width: $screen_width-1280;
+    height: $screen_height-1280;
+
+    .tile-container{
+
+      width: 100%;
+      height: $main-height-1280;
+    }
+  }
+
+  .slide-menu{
+    $button-width:100px;
+    .center{
+      width:$screen_width-1280 - 2*$button-width;
+    }
+  }
+
+  //rgba(154,152,135,0.5)  rgba(234,234,234,0.3)
+  &.room-select {
+    .slider-slide {
+      $slider-slide-height: $main-height-1280;
+      $button-height: $slider-slide-height / 3 - 30;
+      height:$slider-slide-height;
+      .button{
+        background-color: rgba(154,152,135,0.4);
+        height: $button-height;
+        max-height: $button-height;
+        width: 94%;
+        color: white;
+      }
+    }
+  }
+  .vertical-align {
+
+    display: table !important;
+    width: $screen_width-1280;
+    height:$screen_height-1280;
+
+    .row {
+
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+
+@media (width: 1920px) {
+  .main{
+    padding-top: 120px;
+    width: $screen_width-1920;
+    height: $screen_height-1920;
+
+    .tile-container{
+
+      width: 100%;
+      height: $main-height-1920;
+    }
+    .slide-menu{
+      $button-width:100px;
+      .center{
+        width:$screen_width-1920 - 2*$button-width;
+      }
+    }
+    &.room-select {
+      .slider-slide {
+        $slider-slide-height: $main-height-1920;
+        $button-height: $slider-slide-height / 3 - 30;
+        height:$slider-slide-height;
+
+        .button{
+          background-color: rgba(234,234,234,0.7);
+          height: $button-height;
+          max-height: $button-height;
+          //background-color: #aaaaaa;
+          width: 94%;
+          color: white;
+        }
+      }
+    }
+    .vertical-align {
+
+      display: table !important;
+      width: $screen_width-1920;
+      height: $screen_height-1920;
+
+      .row {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+.main{
+  .tile-container::before{
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+  }
+
+  .wide-as-needed {
+    //overflow: scroll;
+    white-space: nowrap;
+  }
+  .scroll {
+    min-width: 100%;
+  }
+
+  .slider{
+  /*  background-color: #fafafa;*/
+  }
+
+  .slide-menu{
+    font-size: 160%;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $button-scroll;
+    width: 100%;
+    height: $bar-height;
+    line-height: 88px;
+    text-align: center;
+
+    $button-width:100px;
+
+    > div{
+      position: absolute;
+      bottom:0;
+      display: inline-block;
+    }
+    .left{
+      left:0;
+      width: $button-width;
+    }
+    .center{
+      left: $button-width;
+
+      text-align: center;
+    }
+    .right{
+      float: right;
+      right:0;
+      width: $button-width;
+    }
+    .slide-item{
+      padding-right: 50px;
+      padding-left: 50px;
+      display: inline-block;
+    }
+  }
+  &.room-select{
+    .slider-slide{
+
+      .row{
+        padding: 0px 10px 0px 30px;
+      }
+
+    }
+  }
+}
+
+
+
+.button-Radius{
+    border-radius: 25px;
+}
+
+.button-Radius2{
+    border-radius: 45px;
+}
+
+
